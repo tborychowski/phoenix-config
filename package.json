@@ -4,7 +4,7 @@
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tborychowski/phoenix-config.git"
   },
   "scripts": {}
 }
