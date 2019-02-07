@@ -1,6 +1,8 @@
 function iTerm2 (app) {
 	if (!isMultiScreen()) return;
-	positionWindow('bottom-right', app.mainWindow());
+	setTimeout(() => {
+		positionWindow('bottom-right', app.mainWindow());
+	}, 1000);
 }
 
 function Code (app) {
