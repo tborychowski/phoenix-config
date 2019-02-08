@@ -4,7 +4,7 @@
 
 1. Install Phoenix
    ```sh
-   brew cask install phoenix.
+   brew cask install phoenix
    ```
 2. In `~/.config` run:
    ```sh
