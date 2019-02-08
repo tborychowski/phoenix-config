@@ -3,6 +3,7 @@ const padding = 2;
 const isMultiScreen = () => Screen.all().length > 1;
 
 function grid (screen) {
+	if (!screen) return;
 	const scr = screen.flippedVisibleFrame();
 	const pos = {
 		x: scr.x,
@@ -41,6 +42,7 @@ function positionWindow (position, win) {
 	if (!win || !win.app) return;
 
 	const screen = win.screen();
+	if (!screen) return;
 	const p = Object.assign({}, grid(screen)[position]);
 	// if (win.app().name() === 'Vivaldi' && isMultiScreen() && position !== 'small') p.y += 22;
 	win.setFrame(p);

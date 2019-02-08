@@ -10,7 +10,7 @@ function Code (app) {
 		const win = app.mainWindow();
 		const pos = isMultiScreen() ? 'left' : 'left-34';
 		positionWindow(pos, win);
-	}, 1000);
+	}, 2000);
 }
 
 function Vivaldi (app) {
