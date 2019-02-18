@@ -11,9 +11,9 @@ Key.on(',',     MOD, () => positionWindow('bottom-left'));
 Key.on('.',     MOD, () => positionWindow('bottom-right'));
 Key.on('/',     MOD, () => positionWindow('bottom-right'));
 
-Key.on(';',     MOD, () => positionWindow('left-34'));
-Key.on('\'',    MOD, () => positionWindow('middle-34'));
-Key.on('\\',    MOD, () => positionWindow('right-34'));
+Key.on(';',     MOD, () => positionWindow('left-45'));
+Key.on('\'',    MOD, () => positionWindow('middle-45'));
+Key.on('\\',    MOD, () => positionWindow('right-45'));
 
 Key.on('k', MOD, () => moveToScreen(1));
 Key.on('l', MOD, () => moveToScreen(0));

@@ -8,15 +8,15 @@ function iTerm2 (app) {
 function Code (app) {
 	setTimeout(() => {
 		const win = app.mainWindow();
-		const pos = isMultiScreen() ? 'left' : 'left-34';
+		const pos = isMultiScreen() ? 'left' : 'left-45';
 		positionWindow(pos, win);
-	}, 2000);
+	}, 3000);
 }
 
 function Vivaldi (app) {
 	setTimeout(() => {
 		const win = app.mainWindow();
-		const pos = isMultiScreen() ? 'small' : 'middle-34';
+		const pos = isMultiScreen() ? 'small' : 'middle-45';
 		positionWindow(pos, win);
 	}, 2000);
 }

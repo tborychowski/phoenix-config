@@ -15,6 +15,7 @@ function grid (screen) {
 		w13: (scr.width - padding) / 3,
 		h13: (scr.height - padding) / 3,
 		w34: scr.width / 4 * 3,
+		w45: scr.width / 5 * 4,
 	};
 	const small = { w: scr.width * 0.6, h: scr.height * 0.8 };
 	return {
@@ -30,9 +31,9 @@ function grid (screen) {
 		'left-13':      { x: pos.x, y: pos.y, width: pos.w13, height: pos.h },
 		'right-23':     { x: pos.x + pos.w13 + padding, y: pos.y, width: pos.w13 * 2 - padding, height: pos.h },
 
-		'left-34':      { x: pos.x, y: pos.y, width: pos.w34, height: pos.h },
-		'middle-34':    { x: pos.x + (pos.w - pos.w34) / 2, y: pos.y, width: pos.w34, height: pos.h },
-		'right-34':     { x: pos.x + (pos.w - pos.w34), y: pos.y, width: pos.w34, height: pos.h },
+		'left-45':      { x: pos.x, y: pos.y, width: pos.w45, height: pos.h },
+		'middle-45':    { x: pos.x + (pos.w - pos.w45) / 2, y: pos.y, width: pos.w45, height: pos.h },
+		'right-45':     { x: pos.x + (pos.w - pos.w45), y: pos.y, width: pos.w45, height: pos.h },
 	};
 }
 
