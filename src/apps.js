@@ -1,43 +1,43 @@
-function iTerm2 (app) {
+function iTerm2 (app, delay = 1000) {
 	if (!isMultiScreen()) return;
 	setTimeout(() => {
 		positionWindow('bottom-right', app.mainWindow());
-	}, 1000);
+	}, delay);
 }
 
-function Code (app) {
+function Code (app, delay = 3000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
 		const pos = isMultiScreen() ? 'left' : 'left-45';
 		positionWindow(pos, win);
-	}, 3000);
+	}, delay);
 }
 
-function Vivaldi (app) {
+function Vivaldi (app, delay = 2000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
 		const pos = isMultiScreen() ? 'small' : 'middle-45';
 		positionWindow(pos, win);
-	}, 2000);
+	}, delay);
 }
 
-function Skype (app) {
+function Skype (app, delay = 3000) {
 	if (!isMultiScreen()) return;
 	setTimeout(() => {
 		const win = app.mainWindow();
 		moveToScreen(1, win);
 		positionWindow('left-13', win);
-	}, 3000);
+	}, delay);
 }
 
 
-function Slack (app) {
+function Slack (app, delay = 5000) {
 	if (!isMultiScreen()) return;
 	setTimeout(() => {
 		const win = app.mainWindow();
 		moveToScreen(1, win);
 		positionWindow('right-23', win);
-	}, 5000);
+	}, delay);
 }
 
 

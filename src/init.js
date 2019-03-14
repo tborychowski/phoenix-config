@@ -15,13 +15,8 @@ Key.on(';',     MOD, () => positionWindow('left-45'));
 Key.on('\'',    MOD, () => positionWindow('middle-45'));
 Key.on('\\',    MOD, () => positionWindow('right-45'));
 
-Key.on('k', MOD, () => moveToScreen(1));
-Key.on('l', MOD, () => moveToScreen(0));
+Key.on('k',     MOD, () => moveToScreen(1));
+Key.on('l',     MOD, () => moveToScreen(0));
+Key.on('m',     MOD, () => defaultWindowPosition());
 
-function onApp (app) {
-	const name = app.name();
-	if (appMap[name]) appMap[name](app);
-}
-
-// Event.on('appDidLaunch', app => onApp(app));
-Event.on('windowDidOpen', win => onApp(win.app()));
+Event.on('appDidLaunch', app => onAppLaunch(app));

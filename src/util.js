@@ -71,6 +71,19 @@ function moveToScreen (screenIdx, window) {
 
 
 
+function onAppLaunch (app, delay) {
+	const name = app.name();
+	if (appMap[name]) appMap[name](app, delay);
+}
+
+
+function defaultWindowPosition () {
+	const win = Window.focused();
+	if (win && win.app) onApp(win.app(), 0);
+}
+
+
+
 function alert (message) {
 	/*global Modal */
 	Modal.build({
