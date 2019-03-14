@@ -79,7 +79,7 @@ function onAppLaunch (app, delay) {
 
 function defaultWindowPosition () {
 	const win = Window.focused();
-	if (win && win.app) onApp(win.app(), 0);
+	if (win && win.app) onAppLaunch(win.app(), 0);
 }
 
 
