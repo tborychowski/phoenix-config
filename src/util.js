@@ -45,7 +45,12 @@ function positionWindow (position, win) {
 	const screen = win.screen();
 	if (!screen) return;
 	const p = Object.assign({}, grid(screen)[position]);
+
+	// TEMP WORKAROUND
+	// if (win.app().name() === 'Vivaldi' && isMultiScreen()) p.y -= 70;
 	// if (win.app().name() === 'Vivaldi' && isMultiScreen() && position !== 'small') p.y += 22;
+
+
 	win.setFrame(p);
 }
 
@@ -55,9 +60,10 @@ function moveToScreen (screenIdx, window) {
 	const screen = Screen.all()[screenIdx];
 	if (typeof screen === 'undefined') return;
 	if (!window) window = Window.focused();
+	if (!window) return;
 
 	const frame = window.frame();
-	const oldScreenRect = window.screen().frame();
+	const oldScreenRect = window.screen() ? window.screen().frame() : {};
 	const newScreenRect = screen.flippedVisibleFrame();
 	const xRatio = newScreenRect.width / oldScreenRect.width;
 	const yRatio = newScreenRect.height / oldScreenRect.height;

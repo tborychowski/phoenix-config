@@ -44,6 +44,7 @@ function Slack (app, delay = 5000) {
 const appMap = {
 	iTerm2,
 	Code,
+	VSCodium: Code,
 	Vivaldi,
 	Skype,
 	Slack,
