@@ -21,6 +21,14 @@ function Vivaldi (app, delay = 2000) {
 	}, delay);
 }
 
+function Firefox (app, delay = 100) {
+	setTimeout(() => {
+		const win = app.mainWindow();
+		const pos = isMultiScreen() ? 'small' : 'middle-45';
+		positionWindow(pos, win);
+	}, delay);
+}
+
 function Skype (app, delay = 3000) {
 	if (!isMultiScreen()) return;
 	setTimeout(() => {
@@ -46,6 +54,7 @@ const appMap = {
 	Code,
 	VSCodium: Code,
 	Vivaldi,
+	Firefox,
 	Skype,
 	Slack,
 };
