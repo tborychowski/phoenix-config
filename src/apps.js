@@ -48,10 +48,11 @@ function Slack (app, delay = 5000) {
 	}, delay);
 }
 
+
 function Outlook (app, delay = 2000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
-		moveToScreen(isMultiScreen() ? 2 : 1, win);
+		moveToScreen(0, win);
 		positionWindow('left-23', win);
 	}, delay);
 }
