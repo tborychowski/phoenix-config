@@ -14,6 +14,7 @@ function grid (screen) {
 		h2: (scr.height - padding) / 2,
 		w13: (scr.width - padding) / 3,
 		h13: (scr.height - padding) / 3,
+		w23: (scr.width - padding) / 3 * 2 - padding,
 		w34: scr.width / 4 * 3,
 		w45: scr.width / 5 * 4,
 	};
@@ -29,7 +30,8 @@ function grid (screen) {
 		'bottom-right': { x: pos.x + pos.w2 + padding, y: pos.y + pos.h2 + padding, width: pos.w2, height: pos.h2 },
 
 		'left-13':      { x: pos.x, y: pos.y, width: pos.w13, height: pos.h },
-		'right-23':     { x: pos.x + pos.w13 + padding, y: pos.y, width: pos.w13 * 2 - padding, height: pos.h },
+		'left-23':      { x: pos.x, y: pos.y, width: pos.w23, height: pos.h },
+		'right-23':     { x: pos.x + pos.w13 + padding, y: pos.y, width: pos.w23, height: pos.h },
 
 		'left-45':      { x: pos.x, y: pos.y, width: pos.w45, height: pos.h },
 		'middle-45':    { x: pos.x + (pos.w - pos.w45) / 2, y: pos.y, width: pos.w45, height: pos.h },
@@ -45,11 +47,6 @@ function positionWindow (position, win) {
 	const screen = win.screen();
 	if (!screen) return;
 	const p = Object.assign({}, grid(screen)[position]);
-
-	// TEMP WORKAROUND
-	// if (win.app().name() === 'Vivaldi' && isMultiScreen()) p.y -= 70;
-	// if (win.app().name() === 'Vivaldi' && isMultiScreen() && position !== 'small') p.y += 22;
-
 
 	win.setFrame(p);
 }

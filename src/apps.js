@@ -21,7 +21,7 @@ function Vivaldi (app, delay = 2000) {
 	}, delay);
 }
 
-function Firefox (app, delay = 100) {
+function Firefox (app, delay = 1000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
 		const pos = isMultiScreen() ? 'small' : 'middle-45';
@@ -48,6 +48,14 @@ function Slack (app, delay = 5000) {
 	}, delay);
 }
 
+function Outlook (app, delay = 2000) {
+	setTimeout(() => {
+		const win = app.mainWindow();
+		moveToScreen(isMultiScreen() ? 2 : 1, win);
+		positionWindow('left-23', win);
+	}, delay);
+}
+
 
 const appMap = {
 	iTerm2,
@@ -57,4 +65,5 @@ const appMap = {
 	Firefox,
 	Skype,
 	Slack,
+	'Microsoft Outlook': Outlook,
 };
