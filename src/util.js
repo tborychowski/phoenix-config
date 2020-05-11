@@ -18,7 +18,7 @@ function grid (screen) {
 		w34: scr.width / 4 * 3,
 		w45: scr.width / 5 * 4,
 	};
-	const small = { w: scr.width * 0.6, h: scr.height * 0.8 };
+	const small = { w: scr.width * 0.6, h: scr.height * 0.9 };
 	return {
 		full:           { x: pos.x, y: pos.y, width: pos.w, height: pos.h },
 		small:          { x: pos.x + (scr.width - small.w) / 2, y: pos.y + scr.height - small.h, width: small.w, height: small.h },
