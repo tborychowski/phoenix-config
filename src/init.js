@@ -9,7 +9,7 @@ Key.on('[',     MOD, () => positionWindow('top-left'));
 Key.on(']',     MOD, () => positionWindow('top-right'));
 Key.on(',',     MOD, () => positionWindow('bottom-left'));
 Key.on('.',     MOD, () => positionWindow('bottom-right'));
-Key.on('/',     MOD, () => positionWindow('bottom-right'));
+Key.on('/',     MOD, () => positionWindow('bigger-term'));
 
 Key.on(';',     MOD, () => positionWindow('left-45'));
 Key.on('\'',    MOD, () => positionWindow('middle-45'));

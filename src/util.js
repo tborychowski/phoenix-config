@@ -19,6 +19,7 @@ function grid (screen) {
 		w45: scr.width / 5 * 4,
 	};
 	const small = { w: scr.width * 0.6, h: scr.height * 0.9 };
+	const biggerTerminal = { w: scr.width * 0.6, h: scr.height * 0.8 };
 	return {
 		full:           { x: pos.x, y: pos.y, width: pos.w, height: pos.h },
 		small:          { x: pos.x + (scr.width - small.w) / 2, y: pos.y + scr.height - small.h, width: small.w, height: small.h },
@@ -28,6 +29,7 @@ function grid (screen) {
 		'top-right':    { x: pos.x + pos.w2 + padding, y: pos.y, width: pos.w2, height: pos.h2 },
 		'bottom-left':  { x: pos.x, y: pos.y + pos.h2 + padding, width: pos.w2, height: pos.h2 },
 		'bottom-right': { x: pos.x + pos.w2 + padding, y: pos.y + pos.h2 + padding, width: pos.w2, height: pos.h2 },
+		'bigger-term':  { x: pos.x + scr.width - small.w, y: pos.y + scr.height - biggerTerminal.h, width: biggerTerminal.w, height: biggerTerminal.h },
 
 		'left-13':      { x: pos.x, y: pos.y, width: pos.w13, height: pos.h },
 		'left-23':      { x: pos.x, y: pos.y, width: pos.w23, height: pos.h },
