@@ -58,6 +58,16 @@ function Outlook (app, delay = 2000) {
 }
 
 
+function WhatsApp (app, delay = 2000) {
+	setTimeout(() => {
+		const win = app.mainWindow();
+		moveToScreen(1, win);
+		positionWindow('left-13', win);
+	}, delay);
+}
+
+
+
 const appMap = {
 	iTerm2,
 	Code,
@@ -67,4 +77,5 @@ const appMap = {
 	Skype,
 	Slack,
 	'Microsoft Outlook': Outlook,
+	WhatsApp,
 };
