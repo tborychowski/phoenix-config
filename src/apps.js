@@ -21,7 +21,7 @@ function Vivaldi (app, delay = 2000) {
 	}, delay);
 }
 
-function Firefox (app, delay = 1000) {
+function Firefox (app, delay = 2000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
 		const pos = isMultiScreen() ? 'small' : 'middle-45';
@@ -62,7 +62,11 @@ function WhatsApp (app, delay = 2000) {
 	setTimeout(() => {
 		const win = app.mainWindow();
 		moveToScreen(1, win);
-		positionWindow('left-13', win);
+		// positionWindow('left-13', win);
+		const p = Object.assign({}, grid(win.screen())['left-13']);
+		p.x -= 250;
+		p.width += 250;
+		win.setFrame(p, win);
 	}, delay);
 }
 
