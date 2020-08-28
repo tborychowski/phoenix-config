@@ -77,7 +77,8 @@ function moveToScreen (screenIdx, window) {
 
 
 function onAppLaunch (app, delay) {
-	const name = app.name();
+	let name = app.name();
+	if (name === 'Code - Insiders') name = 'Code';
 	if (appMap[name]) appMap[name](app, delay);
 }
 
